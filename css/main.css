@@ -1183,7 +1183,7 @@ header nav .collapse .language_button {
 /* End Popup my account */
 /* Start order popup */
 .order_popup {
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   position: fixed;
