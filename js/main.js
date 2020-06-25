@@ -88,53 +88,6 @@ $(document).ready(function () {
         } // End if
       }); */
 
-    // Start popup Message
-    $('#message').click(function () {
-        $('.message').fadeIn().addClass('d-flex');
-    });
-
-    $('.close_button').click(function (){
-        $('.message').fadeOut(500, function () {
-            $(this).removeClass('d-flex');
-        });
-    });
-
-
-    // Start popup goals
-    $('#goal').click(function () {
-        $('.goal').fadeIn().addClass('d-flex');
-    });
-
-    $('.close_button').click(function (){
-        $('.goal').fadeOut(500, function () {
-            $(this).removeClass('d-flex');
-        });
-    });
-
-
-    // Start popup vision
-    $('#vision').click(function () {
-        $('.vision').fadeIn().addClass('d-flex');
-    });
-
-    $('.close_button').click(function (){
-        $('.vision').fadeOut(500, function () {
-            $(this).removeClass('d-flex');
-        });
-    });
-
-
-    // Start popup video
-    $('.play_button').click(function () {
-        $('.popup_video').fadeIn().addClass('d-flex');
-    });
-
-    $('.close_button').click(function (){
-        $('.popup_video').fadeOut(500, function () {
-            $(this).removeClass('d-flex');
-        });
-    });
-
     // Deal with tabs
     $("ul.set_one li a").click(function (e) {
         e.preventDefault();
@@ -184,7 +137,25 @@ $(document).ready(function () {
           $(this).tab('show');
       });
 
+      // Deal with tabs (another way)
+    $(".tab-switch.three li").click(function(){
+        // Add selected class to active link
+        $(this).addClass("selected").siblings().removeClass("selected");
+        // Hide all divs
+        $('.tab_content.three >  div').hide();
+        // Sow div connected with this link
+        $('.' + $(this).data('class')).show();
+    });
 
+      // Deal with tabs (another way)
+    $(".tab-switch.four li").click(function(){
+        // Add selected class to active link
+        $(this).addClass("selected").siblings().removeClass("selected");
+        // Hide all divs
+        $('.tab_content.four >  div').hide();
+        // Sow div connected with this link
+        $('.' + $(this).data('class')).show();
+    });
 
 
     // Scroll Button
@@ -232,17 +203,6 @@ $(document).ready(function () {
     $('#deal').find('.owl-nav').removeClass('disabled');
     $('#deal').on('changed.owl.carousel', function(event) {
         $(this).find('.owl-nav').removeClass('disabled');
-    });
-
-    // Start share popup
-    $('.share').click(function () {
-        $('.popup_share').fadeIn().addClass('d-flex');
-    });
-
-    $('.close_button').click(function (){
-        $('.popup_share').fadeOut(500, function () {
-            $(this).removeClass('d-flex');
-        });
     });
 
     // Nice Scroll

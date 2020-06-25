@@ -33,6 +33,9 @@ footer {
                     }
                 }
             }
+            @media (max-width: 991px) {
+                margin-bottom: $sMargin;
+            }
         }
         .quick_links {
             h4 {
@@ -110,6 +113,25 @@ footer {
                 }
             }
         }
+        @media (max-width: 767px) {
+            .quick_links {
+                text-align: center;
+                margin-bottom: 30px;
+                li {
+                    text-align: center;
+                }
+            }
+            .contact_numbers {
+                text-align: center;
+                margin-bottom: 30px;
+            }
+            .email_us {
+                text-align: center;
+                p {
+                    text-align: auto;
+                }
+            }
+        }
     }
     .copyrights {
         padding-top: 10px;
@@ -119,6 +141,10 @@ footer {
             margin-top: 5px;
             color: #FFF;
             font-size: 20px;
+            @media (max-width: 991px) {
+                text-align: center;
+                margin-bottom: 30px;
+            }
         }
         .payment-ways {
             display: flex;
@@ -128,6 +154,17 @@ footer {
             background-color: #F6F9FF;
             border-radius: 5px;
             opacity: 0.63;
+        }
+        @media (max-width: 576px) {
+            .text {
+                font-size: 15px;
+            }
+            .payment-ways {
+                img {
+                    width: 75%;
+                    height: 75%;
+                }
+            }
         }
     }
 }
