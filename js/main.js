@@ -11,6 +11,7 @@ $(document).ready(function () {
     });
 
 
+
     // Start popup main video
 
     $(window).on('load',function(){
@@ -191,13 +192,18 @@ $(document).ready(function () {
         $(this).find('.owl-nav').removeClass('disabled');
     });
 
-    // Nice Scroll
-    $("html").niceScroll({
+    /* // Nice Scroll
+    $("body").niceScroll({
         background:"rgba(20,20,20,0)",
         cursorcolor: "rgba(29, 188, 221, 1)",
         cursorwidth: "12px",
         
     });
+
+    $('#order').click(function() {
+        $("body").niceScroll( { on: false  } );
+    }); */
+
 
     /* if($("body").hasClass("modal-open")) {
         $('modal').niceScroll({
@@ -205,47 +211,51 @@ $(document).ready(function () {
         })
     } */
 
+    // switch to client register from my account
     $('#switch_client_my_account').click(function() {
         $('#my_account').modal('hide');
         $('#client_register').modal('show');
-      });
+    });
 
+    // switch to marketer register from my account
+    $('#switch_marketer_my_account').click(function() { 
+    $('#my_account').modal('hide');
+    $('#marketer_register').modal('show');
+    });
 
-      $('#switch_marketer_my_account').click(function() { 
-        $('#my_account').modal('hide');
-        $('#marketer_register').modal('show');
-      });
-
-
+    // switch to client register from marketer register
     $('#switch_client_marketer').click(function() {
         $('#marketer_register').modal('hide');
         $('#client_register').modal('show');
       });
 
+    // switch to marketer register from client register
     $('#switch_marketer_client').click(function() {
         $('#client_register').modal('hide');
         $('#marketer_register').modal('show');
       });
 
     
-      $('.already_account').click(function() {
-          $('#client_register').modal('hide');
-          $('#marketer_register').modal('hide');
-          $('#my_account').modal('show');
-      });
+    // switch to my account from client register or marketer register
+    $('.already_account').click(function() {
+        $('#client_register').modal('hide');
+        $('#marketer_register').modal('hide');
+        $('#my_account').modal('show');
+    });
 
-      $('.share').click(function() {
-          $('#popup_main_video').modal('hide');
-          $('#my_account').modal('hide');
-          $('#message').modal('hide');
-          $('#goal').modal('hide');
-          $('#vision').modal('hide');
-          $('#client_register').modal('hide');
-          $('#marketer_register').modal('hide');
-          $('#popup_video').modal('hide');
-          $('#order_popup').modal('hide');
-          $('#popup_share').modal('show');
-      });
+    // switch to popup share from any popup
+    $('.share').click(function() {
+        $('#popup_main_video').modal('hide');
+        $('#my_account').modal('hide');
+        $('#message').modal('hide');
+        $('#goal').modal('hide');
+        $('#vision').modal('hide');
+        $('#client_register').modal('hide');
+        $('#marketer_register').modal('hide');
+        $('#popup_video').modal('hide');
+        $('#order_popup').modal('hide');
+        $('#popup_share').modal('show');
+    });
 
 
 });

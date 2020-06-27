@@ -462,9 +462,9 @@ header nav .collapse .language_button {
 .our_works_area .tab_content .tab_three .nav-tabs li.active .card-title {
   color: #1DBCDD !important;
 }
-.our_works_area .tab_content .tab_two .nav-tabs li.active:after,
-.our_works_area .tab_content .tab_three .nav-tabs li.active:after {
-  background-color: #1DBCDD;
+.our_works_area .tab_content .tab_two .nav-tabs li.active .card:after,
+.our_works_area .tab_content .tab_three .nav-tabs li.active .card:after {
+  background-color: #1DBCDD !important;
 }
 
 /* End Our Works */
@@ -629,7 +629,7 @@ header nav .collapse .language_button {
   transition: all 0.3s;
   cursor: pointer;
 }
-.our_products_area .tabs_control ul li a:hover, .our_products_area .tabs_control ul li a.active {
+.our_products_area .tabs_control ul li:hover a, .our_products_area .tabs_control ul li.active a {
   background-color: #1DBCDD;
   color: #FFF;
 }
@@ -831,13 +831,15 @@ header nav .collapse .language_button {
   background-color: transparent;
   border-radius: 0px 0px 3px 3px;
 }
-.our_products_area .tab_two .nav-tabs li a .card:hover .card-title,
-.our_products_area .tab_three .nav-tabs li a .card:hover .card-title {
+.our_products_area .tab_two .nav-tabs li:hover .card-title, .our_products_area .tab_two .nav-tabs li.active .card-title,
+.our_products_area .tab_three .nav-tabs li:hover .card-title,
+.our_products_area .tab_three .nav-tabs li.active .card-title {
   color: #1DBCDD !important;
 }
-.our_products_area .tab_two .nav-tabs li a .card:hover:after,
-.our_products_area .tab_three .nav-tabs li a .card:hover:after {
-  background-color: #1DBCDD;
+.our_products_area .tab_two .nav-tabs li:hover .card:after, .our_products_area .tab_two .nav-tabs li.active .card:after,
+.our_products_area .tab_three .nav-tabs li:hover .card:after,
+.our_products_area .tab_three .nav-tabs li.active .card:after {
+  background-color: #1DBCDD !important;
 }
 
 /* End Our Products */

@@ -345,8 +345,8 @@
                         .card-title {
                             color: $mainColor !important;
                         }
-                        &:after {
-                            background-color: $mainColor;
+                        .card:after {
+                            background-color: $mainColor !important;
                         }
                         
                     }
@@ -516,8 +516,10 @@
                     box-shadow: 0px 0px 6px #A2AFCD33;
                     @include prefixer(transition, all 0.3s, webkit moz o ms);
                     cursor: pointer;
-                    &:hover,
-                    &.active {
+                }
+                &:hover,
+                &.active {
+                    a {
                         background-color: $mainColor;
                         color: #FFF;
                     }
@@ -710,16 +712,17 @@
                             background-color: transparent;
                             border-radius: 0px 0px 3px 3px;
                         }
-                        &:hover {
-                            .card-title {
-                                color: $mainColor !important;
-                            }
-                            &:after {
-                                background-color: $mainColor;
-                            }
-                            
-                        }
                     }
+                }
+                &:hover,
+                &.active {
+                    .card-title {
+                        color: $mainColor !important;
+                    }
+                    .card:after {
+                        background-color: $mainColor !important;
+                    }
+                    
                 }
             }
         }
