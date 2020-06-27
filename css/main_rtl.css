@@ -1948,5 +1948,107 @@ footer .copyrights .payment-ways {
 }
 
 /* End Footer */
+/* Start global */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Cairo", sans-serif;
+}
 
-/*# sourceMappingURL=main.css.map */
+p, a {
+  font-family: "Cairo", sans-serif;
+}
+
+/* End global */
+/* Start header */
+header nav .navbar-brand {
+  margin-right: 0;
+}
+
+/* End header */
+/* Start Our Works */
+.our_works_area .tab_content .card .img_container a {
+  left: auto;
+  right: 10px;
+}
+.our_works_area .tab_content .card .card-body p {
+  text-align: right;
+}
+
+/* End Our Works */
+/* Start statistics */
+.statistics .item .details {
+  margin-left: 0;
+  margin-right: 30px;
+}
+
+/* End statistics */
+/* Start Our Products */
+.our_products_area .tab_content .card .img_container a {
+  left: auto;
+  right: 10px;
+}
+.our_products_area .tab_content .card .card-body p {
+  text-align: right;
+}
+
+/* End Our Products */
+/* Start footer */
+footer .info .social-media ul {
+  padding-right: 0;
+}
+footer .info .quick_links ul {
+  padding-right: 0;
+}
+footer .info .contact_numbers ul {
+  position: relative;
+  right: -10px;
+  padding-right: 0;
+}
+footer .info .email_us ul {
+  position: relative;
+  right: -10px;
+  padding-right: 0;
+}
+@media (min-width: 768px) {
+  footer .info .quick_links {
+    text-align: right;
+  }
+  footer .info .quick_links ul {
+    padding-right: 0;
+  }
+  footer .info .contact_numbers {
+    text-align: right;
+  }
+  footer .info .contact_numbers ul {
+    position: relative;
+    right: -10px;
+    padding-right: 0;
+  }
+  footer .info .email_us {
+    text-align: right;
+  }
+  footer .info .email_us ul {
+    position: relative;
+    right: -10px;
+    padding-right: 0;
+  }
+}
+@media (min-width: 992px) {
+  footer .copyrights .text {
+    text-align: right;
+  }
+}
+
+/* End footer */
+.modal button.close {
+  margin-left: 0;
+}
+
+/* Start popup main video */
+#popup_main_video .modal-footer .follow_up:after {
+  content: "";
+  font-weight: 900;
+}
+
+/* End popup main video */
+
+/*# sourceMappingURL=main_rtl.css.map */

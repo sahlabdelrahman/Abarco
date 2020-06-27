@@ -1,0 +1,179 @@
+@import 'sass/base/variables';
+@import 'sass/utils/mixins';
+@import 'sass/base/global';
+
+@import 'sass/layout/header';
+@import 'sass/pages/home';
+@import 'sass/layout/footer';
+
+/* Start global */
+h1, h2, h3, h4, h5, h6 {
+    font-family: $cairo;
+}
+
+p, a {
+    font-family: $cairo;
+}
+/* End global */
+
+/* Start header */
+
+header {
+    nav {
+        .navbar-brand {
+            margin-right: 0;
+        } 
+    }
+}
+
+/* End header */
+
+/* Start Our Works */
+
+.our_works_area {
+    .tab_content {
+        .card {
+            .img_container {
+                a {
+                    left: auto; // rtl
+                    right: 10px; // rtl
+                    
+                }
+            }
+            .card-body {
+                
+                p {
+                    text-align: right; // rtl
+                }
+            }
+            
+        }
+    }
+}
+
+/* End Our Works */
+
+/* Start statistics */
+
+.statistics {
+    .item {
+        .details {
+            margin-left: 0;
+            margin-right: 30px;
+        }
+    }
+}
+
+/* End statistics */
+
+/* Start Our Products */
+
+.our_products_area {
+    .tab_content {
+        .card {
+            .img_container {
+                a {
+                    left: auto; // rtl
+                    right: 10px; // rtl
+                    
+                }
+            }
+            .card-body {
+                
+                p {
+                    text-align: right; // rtl
+                }
+            }
+            
+        }
+    }
+}
+
+/* End Our Products */
+
+/* Start footer */
+
+footer {
+    .info {
+        .social-media {
+            ul {
+                padding-right: 0;
+            }
+        }
+        .quick_links {
+            ul {
+                padding-right: 0;
+            }
+        }
+        .contact_numbers {
+            ul {
+                position: relative;
+                right: -10px;
+                padding-right: 0;
+            }
+        }
+        .email_us {
+            ul {
+                position: relative;
+                right: -10px;
+                padding-right: 0;
+            }
+        }
+        @media (min-width: 768px) {
+            .quick_links {
+                text-align: right;
+                ul {
+                    padding-right: 0;
+                }
+            }
+            .contact_numbers {
+                text-align: right;
+                ul {
+                    position: relative;
+                    right: -10px;
+                    padding-right: 0;
+                }
+            }
+            .email_us {
+                text-align: right;
+                ul {
+                    position: relative;
+                    right: -10px;
+                    padding-right: 0;
+                }
+            }
+        }
+    }
+    .copyrights {
+        
+        @media (min-width: 992px) {
+            .text {
+                text-align: right;
+            }    
+        }
+    }
+}
+
+/* End footer */
+
+.modal {
+    button.close {
+        margin-left: 0;
+    }
+}
+
+/* Start popup main video */
+
+#popup_main_video {
+    .modal-footer {
+        .follow_up {
+            &:after {
+                content: "\f053";
+                font-weight: 900;
+            }
+        }
+    }
+}
+
+/* End popup main video */
+

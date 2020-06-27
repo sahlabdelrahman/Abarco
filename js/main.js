@@ -12,50 +12,35 @@ $(document).ready(function () {
 
 
     // Start popup main video
-    $(window).on('load', function () {
-        $('.popup_main_video').fadeIn().addClass('d-flex');
+
+    $(window).on('load',function(){
+        $('#popup_main_video').modal('show');
     });
 
     $('.follow_up').click(function (){
-        $('.popup_main_video').fadeOut(500, function () {
-            $(this).removeClass('d-flex');
-        });
+        $('#popup_main_video').modal('hide');
     });
 
 
 
-
-    // Start popup My account
-    $('.account').click(function (e) {
+    // Change content when click on submit_form_signin
+    $(".submit_form_signin").click('on', function (e) {
         e.preventDefault();
-        $('.popup_account').fadeIn().addClass('d-flex');
-    });
-
-    $('.close_button').click(function (){
-        $('.popup_account').fadeOut(500, function () {
-            $(this).removeClass('d-flex');
-        });
-    });
-
-    // Change content when click on submit_form
-    $("#submit_form").click('on', function (e) {
-        e.preventDefault();
-        $('#change_text').text("Enter the confirmation code");
-        $('.change_palceholder').attr("placeholder", "Confirmation code");
-        $('#send_again').css('display', 'flex');
+        $('#my_account .change_text').text("Enter the confirmation code");
+        $('#my_account .change_palceholder').attr("placeholder", "Confirmation code");
+        $('#my_account .send_again').css('display', 'flex');
         $(this).text("Enter Code");
     });
 
-    // Start order popup
-    $('.order').click(function () {
-        $('.order_popup').fadeIn().addClass('d-flex');
+    // Change content when click on submit_form_register
+    $(".submit_form_register").click('on', function (e) {
+        e.preventDefault();
+        $('#client_register .change_text').text("Enter the confirmation code");
+        $('#client_register .change_palceholder').attr("placeholder", "Confirmation code");
+        $('#client_register .send_again').css('display', 'flex');
+        $(this).text("Enter Code");
     });
 
-    $('.close_button').click(function (){
-        $('.order_popup').fadeOut(500, function () {
-            $(this).removeClass('d-flex');
-        });
-    });
 
     // control payment methods
     $("#customRadioInline2").click('on', function () {
@@ -66,7 +51,7 @@ $(document).ready(function () {
     });
 
     // Add smooth scrolling to all links
-    /* $("a").on('click', function(event) {
+    $("header a, footer a").on('click', function(event) {
   
         // Make sure this.hash has a value before overriding default behavior
         if (this.hash !== "") {
@@ -86,7 +71,7 @@ $(document).ready(function () {
             window.location.hash = hash;
           });
         } // End if
-      }); */
+      });
 
     // Deal with tabs
     $("ul.set_one li a").click(function (e) {
@@ -187,6 +172,7 @@ $(document).ready(function () {
         autoplayHoverPause:true,
         nav: false,
         dots: false,
+        rtl:true,
         navText:["<i class='nav-btn next-slide fas fa-chevron-left'></i>","<i class='nav-btn prev-slide fas fa-chevron-right'></i>"],
         responsive:{
             0:{
@@ -212,5 +198,11 @@ $(document).ready(function () {
         cursorwidth: "12px",
         zindex:'9999'
     });
+
+    /* if($("body").hasClass("modal-open")) {
+        $('modal').niceScroll({
+            
+        })
+    } */
 
 });

@@ -1,3 +1,4 @@
+
 /* Start Banner */
 
 .banner_area {
@@ -261,6 +262,19 @@
                     font-weight: 300;
                     color: $secColor;
                 }
+                @media (min-width: 992px) and (max-width: 1199px) {
+                    h6 {
+                        .project_name  {
+                            font-size: 14px;
+                        }
+                        .country {
+                            font-size: 11px
+                        }
+                    }
+                    p {
+                        font-size: 12px;
+                    }
+                }
             }
             &:hover {
                 .project_name {
@@ -271,10 +285,9 @@
         .tab_two,
         .tab_three {
             .nav-tabs {
+                padding-right: 0;
                 border: none;
                 li {
-                    display: inline-block;
-                    text-align: center;
                     position: relative;
                     margin-bottom: 30px;
                     border-radius: 5px !important;
@@ -441,6 +454,7 @@
         text-align: center;
     }
     .item {
+        justify-content: center;
         background-color: #FFF;
         border: 2px dashed $mainColor;
         padding: $xsPadding;
@@ -657,6 +671,8 @@
     .tab_three {
         
         .nav-tabs {
+            border: none;
+            padding-right: 0;
             li {
                 position: relative;
                 margin-bottom: 30px;
@@ -809,41 +825,40 @@
 
 /* Start Popup main video */
 
-.popup_main_video {
-    display: none;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, .7);
-    z-index: 9999;
-    .body {
+#popup_main_video {  
+    @media (min-width: 768px) {
+        .modal-xl {
+          width: 60%;
+         max-width:1200px;
+        }
+      }  
+    .modal-content {
         border-radius: 5px;
-        .content {
-            
-           .video_container {
-               position: relative;
-               overflow: hidden;
-               video {
-                    width: 870px;
-                    height: 546px;
+        background-color: transparent !important;
+        border: none;
+        .modal-body {
+            .video_container {
+                position: relative;
+                overflow: hidden;
+                
+                video {
+                    display: block;
+                    width: 100%;
+                    height: 100%;    
                     border-radius: 5px;
                     object-fit: cover;
-               }
-           }
+                }
+            } 
         }
-        .footer {
+        .modal-footer {
             display: flex;
             justify-content: center;
+            border: none;
             .follow_up {
                 border: 1px solid $mainColor;
                 border-radius: 3px;
                 background-color: #FFF;
                 padding: 8px 16px;
-                margin-top: 20px;
                 color: $secColor;
                 font-size: 14px;
                 font-weight: bold;
@@ -865,6 +880,7 @@
                     color: #FFF;
                 }
             }
+                    
         }
     }
 }
@@ -875,57 +891,51 @@
 
 /* Start my account */
 
-.popup_account {
-    display: none;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: #707070;
-    z-index: 9999;
-    .body {
-        background-color: #FFF;
+
+#my_account {
+    @media (min-width: 768px) {
+        .modal-xl {
+          width: 60%;
+         max-width:1200px;
+        }
+      }
+    .modal-content {
         border-radius: 5px;
         box-shadow: 0px 30px 30px #2699FB1A;
-        width: 55%;
-        .head {
-            display: flex;
-            justify-content: space-between;
-            position: relative;
-            margin-bottom: 35px;
-            &:after {
-                content: '';
-                width: 106%;
-                height: 1px;
-                background-color: #707070;
-                position: absolute;
-                bottom: -15px;
-                left: -24px;
-                opacity: 0.2;
-            }
+        .modal-header {
             h4 {
                 font-size: 14px;
                 color: $textColor;
                 font-weight: 500;
             }
-            .close_button {
-                width: 29px;
-                height: 29px;
-                line-height: 20px;
-                text-align: center;
-                border: 1px solid $textColor;
-                border-radius: 50%;
-                color: $textColor;
-                font-size: 24px;
-                cursor: pointer;
+            .close {
+                opacity: 1;
+                .close_button {
+                    width: 29px;
+                    height: 29px;
+                    display: inline-block;
+                    line-height: 20px;
+                    text-align: center;
+                    border: 1px solid $textColor;
+                    border-radius: 50%;
+                    color: $textColor;
+                    font-size: 24px;
+                    cursor: pointer;
+                }
             }
         }
-        .content {
+        .modal-body {
+            text-align: initial;
             .form {
                 .heading {
+                    margin-top: 30px;
+                    margin-bottom: 30px;
+                    span {
+                        display: block;
+                        text-align: center;
+                        font-size: 12px;
+                        color: #6F7F9F;
+                    }
                     h3 {
                         text-align: center;
                         font-size: 18px;
@@ -934,39 +944,68 @@
                     }
                 }
                 .cont {
-                    .tabs_control {
-                        margin-top: 26px;
-                        margin-bottom: 30px;
-                        ul {
+                    .switch {
+                        display: flex;
+                        justify-content: center;
+                        li {
+                            width: 170px;
+                            height: 42px;
                             display: flex;
-                            justify-content: flex-start;
-                            li {
-                                width: 170px;
-                                height: 42px;
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
-                                margin-right: 10px;
-                                background-color: #FFF;
-                                color: $secColor;
-                                font-size: 14px;
-                                font-weight: 500;
-                                border-radius: 3px;
-                                box-shadow: 0px 0px 6px #A2AFCD33;
-                                @include prefixer(transition, all 0.3s, webkit moz o ms);
-                                cursor: pointer;
-                                &:hover,
-                                &.selected {
-                                    background-color: $mainColor;
-                                    color: #FFF;
+                            justify-content: center;
+                            align-items: center;
+                            margin-right: 10px;
+                            background-color: #FFF;
+                            color: $secColor;
+                            font-size: 14px;
+                            font-weight: 500;
+                            border-radius: 3px;
+                            border: 1px solid $mainColor;
+                            box-shadow: 0px 0px 6px #A2AFCD33;
+                            @include prefixer(transition, all 0.3s, webkit moz o ms);
+                            cursor: pointer;
+                            button {
+                                @include prefixer(transition, all 0.3s, webkit moz o ms); 
+                            }
+                            &:hover {
+                                background-color: $mainColor;
+                                button {
+                                    color: #FFF !important;
                                 }
                             }
                         }
                     }
-                    .tab_content {
-                        & > div:not(.tab_one) {
-                            display: none;
+                    & > h5 {
+                        margin-top: 20px;
+                        margin-bottom: 20px;
+                        text-align: center;
+                        font-size: 14px;
+                        color: #6F7F9F;
+                        position: relative;
+                        opacity: 0.8;
+                        &:after {
+                            content: '';
+                            position: absolute;
+                            right: 0;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            width: 35%;
+                            height: 1px;
+                            background-color: #6F7F9F;
+                            opacity: 0.5;
                         }
+                        &:before {
+                            content: '';
+                            position: absolute;
+                            left: 0;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            width: 35%;
+                            height: 1px;
+                            background-color: #6F7F9F;
+                            opacity: 0.5;
+                        }
+                    }
+                    .tab_content {
                         .tab_one,
                         .tab_two {
                             form {
@@ -985,7 +1024,7 @@
                                     border-radius: 3px;
                                     font-weight: 500;
                                 }
-                                #send_again {
+                                .send_again {
                                     display: none;
                                     justify-content: flex-end;
                                     margin-top: 5px;
@@ -993,9 +1032,8 @@
                                     font-size: 12px;
                                     text-decoration: underline;
                                     cursor: pointer;
-                                    
                                 }
-                                button {
+                                .submit_form_signin {
                                     background-color: $mainColor;
                                     font-size: 16px;
                                     font-weight: 600;
@@ -1007,7 +1045,7 @@
                         }
                     }
                 }
-            }    
+            }
             .img_container {
                 position: relative;
                 display: flex;
@@ -1031,13 +1069,9 @@
             }
 
         }
-        .footer {
-            display: flex;
-            justify-content: flex-end;
-            position: relative;
+        .modal-footer {
             .close_button {
                 padding: 10px 20px;
-                margin-top: 35px;
                 background: #E64545;
                 color: #FFF;
                 border-radius: 3px;
@@ -1045,15 +1079,300 @@
                 font-weight: bold;
                 cursor: pointer;
             }
-            &:before {
-                content: '';
-                width: 106%;
-                height: 1px;
-                background-color: #707070;
-                position: absolute;
-                top: 11px;
-                left: -24px;
-                opacity: 0.2;
+        }
+    }
+}
+
+// popup client register
+#client_register {
+    @media (min-width: 768px) {
+        .modal-xl {
+          width: 60%;
+         max-width:1200px;
+        }
+      }
+    .modal-content {
+        border-radius: 5px;
+        box-shadow: 0px 30px 30px #2699FB1A;
+        .modal-header {
+            h4 {
+                font-size: 14px;
+                color: $textColor;
+                font-weight: 500;
+            }
+            .close {
+                opacity: 1;
+                .close_button {
+                    width: 29px;
+                    height: 29px;
+                    display: inline-block;
+                    line-height: 20px;
+                    text-align: center;
+                    border: 1px solid $textColor;
+                    border-radius: 50%;
+                    color: $textColor;
+                    font-size: 24px;
+                    cursor: pointer;
+                }
+            }
+        }
+        .modal-body {
+            text-align: initial;
+            .form {
+                .heading {
+                    margin-top: 30px;
+                    margin-bottom: 30px;
+                    span {
+                        display: block;
+                        text-align: center;
+                        font-size: 12px;
+                        color: #6F7F9F;
+                    }
+                    h3 {
+                        text-align: center;
+                        font-size: 18px;
+                        font-weight: bold;
+                        color: $textColor;
+                    }
+                }
+                .cont {
+                    
+                    .tab_content {
+                        .tab_one {
+                            form {
+                                label {
+                                    font-size: 14px;
+                                    font-weight: 500;
+                                    color: $secColor;
+                                }
+                                input {
+                                    width: 100%;
+                                    height: auto;
+                                    padding: 10px 14px !important;
+                                    color: $secColor;
+                                    font-size: 12px;
+                                    border: 1px solid #A2AFCD;
+                                    border-radius: 3px;
+                                    font-weight: 500;
+                                }
+                                .send_again {
+                                    display: none;
+                                    justify-content: flex-end;
+                                    margin-top: 5px;
+                                    color: $secColor;
+                                    font-size: 12px;
+                                    text-decoration: underline;
+                                    cursor: pointer;
+                                    
+                                }
+                                .submit_form_register {
+                                    background-color: $mainColor;
+                                    font-size: 16px;
+                                    font-weight: 600;
+                                    color: #FFF;
+                                    border: 1px solid #1DBCDD;
+                                    border-radius: 3px;
+                                }
+                                .marketer_register {
+                                    background-color: #FFF;
+                                    font-size: 16px;
+                                    font-weight: 600;
+                                    color: #2A3554;
+                                    border: 1px solid $mainColor;
+                                    border-radius: 3px;
+                                }
+                                .already_account {
+                                    padding: 0;
+                                    float: right;
+                                    margin-top: 5px;
+                                    color: $secColor;
+                                    font-size: 12px;
+                                    cursor: pointer;
+                                    span {
+                                        color: $mainColor;
+                                        text-decoration: underline;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .img_container {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                .overlay {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-image: url(/images/popups/overlay.svg);
+                }
+                .oil {
+                    max-width: 100%;
+                }
+                .logo {
+                    position: absolute;
+                }
+            }
+
+        }
+        .modal-footer {
+            .close_button {
+                padding: 10px 20px;
+                background: #E64545;
+                color: #FFF;
+                border-radius: 3px;
+                font-size: 14px;
+                font-weight: bold;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+
+// popup marketer register
+#marketer_register {
+    @media (min-width: 768px) {
+        .modal-xl {
+          width: 60%;
+         max-width:1200px;
+        }
+      }
+    .modal-content {
+        border-radius: 5px;
+        box-shadow: 0px 30px 30px #2699FB1A;
+        .modal-header {
+            h4 {
+                font-size: 14px;
+                color: $textColor;
+                font-weight: 500;
+            }
+            .close {
+                opacity: 1;
+                .close_button {
+                    width: 29px;
+                    height: 29px;
+                    display: inline-block;
+                    line-height: 20px;
+                    text-align: center;
+                    border: 1px solid $textColor;
+                    border-radius: 50%;
+                    color: $textColor;
+                    font-size: 24px;
+                    cursor: pointer;
+                }
+            }
+        }
+        .modal-body {
+            text-align: initial;
+            .form {
+                .heading {
+                    margin-top: 30px;
+                    margin-bottom: 30px;
+                    span {
+                        display: block;
+                        text-align: center;
+                        font-size: 12px;
+                        color: #6F7F9F;
+                    }
+                    h3 {
+                        text-align: center;
+                        font-size: 18px;
+                        font-weight: bold;
+                        color: $textColor;
+                    }
+                }
+                .cont {
+                    
+                    .tab_content {
+                        .tab_two {
+                            form {
+                                label {
+                                    font-size: 14px;
+                                    font-weight: 500;
+                                    color: $secColor;
+                                }
+                                input {
+                                    width: 100%;
+                                    height: auto;
+                                    padding: 10px 14px !important;
+                                    color: $secColor;
+                                    font-size: 12px;
+                                    border: 1px solid #A2AFCD;
+                                    border-radius: 3px;
+                                    font-weight: 500;
+                                }
+                                .enter {
+                                    background-color: $mainColor;
+                                    font-size: 16px;
+                                    font-weight: 600;
+                                    color: #FFF;
+                                    border: 1px solid #1DBCDD;
+                                    border-radius: 3px;
+                                }
+                                .client_register {
+                                    background-color: #FFF;
+                                    font-size: 16px;
+                                    font-weight: 600;
+                                    color: #2A3554;
+                                    border: 1px solid $mainColor;
+                                    border-radius: 3px;
+                                }
+                                .already_account {
+                                    padding: 0;
+                                    float: right;
+                                    margin-top: 5px;
+                                    color: $secColor;
+                                    font-size: 12px;
+                                    cursor: pointer;
+                                    span {
+                                        color: $mainColor;
+                                        text-decoration: underline;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .img_container {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                .overlay {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-image: url(/images/popups/overlay.svg);
+                }
+                .oil {
+                    max-width: 100%;
+                }
+                .logo {
+                    position: absolute;
+                }
+            }
+
+        }
+        .modal-footer {
+            .close_button {
+                padding: 10px 20px;
+                background: #E64545;
+                color: #FFF;
+                border-radius: 3px;
+                font-size: 14px;
+                font-weight: bold;
+                cursor: pointer;
             }
         }
     }
@@ -1063,57 +1382,48 @@
 /* End Popup my account */
 
 /* Start order popup */
+/* @media (min-width: 992px) {
+    .modal-lg {
+      width: 900px;
+    }
+  } */
 
-.order_popup {
-    display: none;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: #707070;
-    z-index: 9999;
-    .body {
-        background-color: #FFF;
+  
+
+#order_popup {
+    @media (min-width: 768px) {
+        .modal-xl {
+          width: 60%;
+         max-width:1200px;
+        }
+    }
+    .modal-content {
         border-radius: 5px;
         box-shadow: 0px 30px 30px #2699FB1A;
-        width: 55%;
-        .head {
-            display: flex;
-            justify-content: space-between;
-            position: relative;
-            margin-bottom: 35px;
-            &:after {
-                content: '';
-                width: 106%;
-                height: 1px;
-                background-color: #707070;
-                position: absolute;
-                bottom: -15px;
-                left: -24px;
-                opacity: 0.2;
-            }
+        text-align: initial;
+        .modal-header {
             h4 {
                 font-size: 18px;
                 color: $textColor;
                 font-weight: 600;
             }
-            .close_button {
-                width: 29px;
-                height: 29px;
-                line-height: 20px;
-                text-align: center;
-                border: 2px solid $textColor;
-                border-radius: 50%;
-                color: $textColor;
-                font-size: 24px;
-                cursor: pointer;
+            .close {
+                opacity: 1;
+                .close_button {
+                    width: 29px;
+                    height: 29px;
+                    display: inline-block;
+                    line-height: 20px;
+                    text-align: center;
+                    border: 2px solid $textColor;
+                    border-radius: 50%;
+                    color: $textColor;
+                    font-size: 24px;
+                    cursor: pointer;
+                }
             }
         }
-
-        .content {
+        .modal-body {
             form {
                 label {
                     font-size: 14px;
@@ -1125,7 +1435,7 @@
                     color: $secColor;
                 }
                 .methods {
-                    margin-right: 26px; // Notice En
+                    margin-right: 10px; // Notice En
                 }
                 .transfer {
                     margin-top: 30px;
@@ -1154,53 +1464,42 @@
                                 font-size: 27px;
                             }
                         }
-                         
-                         #upload-photo {
+                        
+                        #upload-photo {
                             opacity: 0;
                             position: absolute;
                             z-index: -1;
-                         }
+                        }
                     }
                 }
-                
             }
         }
-
-        .footer {
-            display: flex;
-            justify-content: space-between;
-            position: relative;
-            .complete_button {
-                padding: 8px 60px;
-                margin-top: 35px;
-                background-color: $mainColor;
-                color: #FFF;
-                border: 1px solid #1DBCDD;
-                border-radius: 3px;
-                font-size: 16px;
-                font-weight: 600;
-                cursor: pointer;
-            }
-            .close_button {
-                padding: 10px 20px;
-                margin-top: 35px;
-                background: #E64545;
-                color: #FFF;
-                border-radius: 3px;
-                font-size: 14px;
-                font-weight: bold;
-                cursor: pointer;
-            }
-            &:before {
-                content: '';
-                width: 106%;
-                height: 1px;
-                background-color: #707070;
-                position: absolute;
-                top: 11px;
-                left: -24px;
-                opacity: 0.2;
-            }
+        .modal-footer {
+                display: flex;
+                justify-content: space-between;
+                position: relative;
+                .complete_button {
+                    padding: 8px 60px;
+                    background-color: $mainColor;
+                    color: #FFF;
+                    border: 1px solid #1DBCDD;
+                    border-radius: 3px;
+                    font-size: 16px;
+                    font-weight: 600;
+                    cursor: pointer;
+                }
+                .close_button {
+                    padding: 10px 20px;
+                    background: #E64545;
+                    color: #FFF;
+                    border-radius: 3px;
+                    font-size: 14px;
+                    font-weight: bold;
+                    cursor: pointer;
+                }
+                @media (max-width: 991px) {
+                    justify-content: center;
+                }
         }
     }
 }
@@ -1368,7 +1667,12 @@
 /* Start Popup Video */
 
 #popup_video {
-    margin: auto;
+    @media (min-width: 768px) {
+        .modal-xl {
+          width: 60%;
+         max-width:1200px;
+        }
+      }
     .modal-content {
         width: 953px;
         border-radius: 5px;
@@ -1376,14 +1680,6 @@
         .modal-header {
             .close {
                 opacity: 1;
-                p {
-                    font-size: 18px;
-                    font-weight: bold;
-                    color: $textColor;
-                    span {
-                        color: $mainColor;
-                    }
-                }
                 .close_button {
                     width: 29px;
                     height: 29px;
@@ -1400,14 +1696,13 @@
         }
         .modal-body {
             .video_container {
-                width: 904px;
-                height: 532px;
                 position: relative;
                 overflow: hidden;
                 video {
+                     display: block;
                      width: 100%;
-                     border-radius: 5px;
                      height: 100%;
+                     border-radius: 5px;
                      object-fit: cover;
                      .controls {
                          position: absolute;
@@ -1423,7 +1718,6 @@
         .modal-footer {
             .close_button {
                 padding: 10px 20px;
-                margin-top: 20px;
                 background: #E64545;
                 color: #FFF;
                 border-radius: 3px;
