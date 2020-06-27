@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Heebo:wght@400;500;700&family=Roboto:ital,wght@0,400;0,700;1,500&display=swap");
 /* 
     Prefixes Mixin
@@ -1011,13 +1010,11 @@ header nav .collapse .language_button {
   -ms-transition: all 0.3s;
   transition: all 0.3s;
 }
-#popup_main_video .modal-content .modal-footer .follow_up:after {
-  content: "";
-  font-family: "Font Awesome 5 Free";
+#popup_main_video .modal-content .modal-footer .follow_up i {
   width: 7px;
   height: 12px;
   position: relative;
-  top: 1px;
+  top: 0.5px;
   left: 5px;
   display: inline-block;
   font-size: 14px;

@@ -864,13 +864,11 @@
                 font-weight: bold;
                 cursor: pointer;
                 @include prefixer(transition, all 0.3s, webkit moz o ms);
-                &:after {
-                    content: "\f054"; // Noitce En 
-                    font-family: "Font Awesome 5 Free";
+                i {
                     width: 7px;
                     height: 12px;
                     position: relative;
-                    top: 1px;
+                    top: 0.5px;
                     left: 5px;
                     display: inline-block;
                     font-size: 14px;
