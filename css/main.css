@@ -977,6 +977,7 @@ header nav .collapse .language_button {
 #popup_main_video .modal-content {
   border-radius: 5px;
   background-color: transparent !important;
+  box-shadow: none !important;
   border: none;
 }
 #popup_main_video .modal-content .modal-body .video_container {

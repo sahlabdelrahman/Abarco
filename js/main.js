@@ -196,7 +196,7 @@ $(document).ready(function () {
         background:"rgba(20,20,20,0)",
         cursorcolor: "rgba(29, 188, 221, 1)",
         cursorwidth: "12px",
-        zindex:'9999'
+        
     });
 
     /* if($("body").hasClass("modal-open")) {
@@ -204,5 +204,33 @@ $(document).ready(function () {
             
         })
     } */
+
+    $('#client_register').click(function() {
+        $('#my_account').modal('hide');
+        $('#client_register').modal('show');
+      });
+
+
+      $('#client_register').click(function() {
+        $('#marketer_register').modal('hide');
+        $('#client_register').modal('show');
+      });
+
+
+    $('#marketer_register').click(function() {
+        $('#my_account').modal('hide');
+        $('#marketer_register').modal('show');
+      });
+
+      
+    $('#marketer_register').click(function() {
+        $('#client_register').modal('hide');
+        $('#marketer_register').modal('show');
+      });
+    
+      $('#signin_back').click(function() {
+          $('#client_register').modal('hide');
+      });
+
 
 });
