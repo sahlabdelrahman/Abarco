@@ -163,8 +163,7 @@ $(document).ready(function () {
     });
 
     // carousel
-    var deal = $('#deal');
-    $('#deal').owlCarousel({
+    $('[carouselPanel="1"]').owlCarousel({
         loop:true,
         margin:15,
         nav:false,
@@ -187,8 +186,8 @@ $(document).ready(function () {
             }
         }
     });
-    $('#deal').find('.owl-nav').removeClass('disabled');
-    $('#deal').on('changed.owl.carousel', function(event) {
+    $('[carouselPanel="1"]').find('.owl-nav').removeClass('disabled');
+    $('[carouselPanel="1"]').on('changed.owl.carousel', function(event) {
         $(this).find('.owl-nav').removeClass('disabled');
     });
 

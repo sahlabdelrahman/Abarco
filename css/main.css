@@ -104,6 +104,10 @@ header nav .collapse .language_button {
 }
 
 /* End Header */
+.owl-carousel .owl-stage-outer {
+  transform: translate3d(0, 0, 0);
+}
+
 /* Start Banner */
 .banner_area {
   position: relative;
