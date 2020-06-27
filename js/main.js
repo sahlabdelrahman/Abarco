@@ -205,31 +205,46 @@ $(document).ready(function () {
         })
     } */
 
-    $('#client_register').click(function() {
+    $('#switch_client_my_account').click(function() {
         $('#my_account').modal('hide');
         $('#client_register').modal('show');
       });
 
 
-      $('#client_register').click(function() {
+      $('#switch_marketer_my_account').click(function() { 
+        $('#my_account').modal('hide');
+        $('#marketer_register').modal('show');
+      });
+
+
+    $('#switch_client_marketer').click(function() {
         $('#marketer_register').modal('hide');
         $('#client_register').modal('show');
       });
 
-
-    $('#marketer_register').click(function() {
-        $('#my_account').modal('hide');
-        $('#marketer_register').modal('show');
-      });
-
-      
-    $('#marketer_register').click(function() {
+    $('#switch_marketer_client').click(function() {
         $('#client_register').modal('hide');
         $('#marketer_register').modal('show');
       });
+
     
-      $('#signin_back').click(function() {
+      $('.already_account').click(function() {
           $('#client_register').modal('hide');
+          $('#marketer_register').modal('hide');
+          $('#my_account').modal('show');
+      });
+
+      $('.share').click(function() {
+          $('#popup_main_video').modal('hide');
+          $('#my_account').modal('hide');
+          $('#message').modal('hide');
+          $('#goal').modal('hide');
+          $('#vision').modal('hide');
+          $('#client_register').modal('hide');
+          $('#marketer_register').modal('hide');
+          $('#popup_video').modal('hide');
+          $('#order_popup').modal('hide');
+          $('#popup_share').modal('show');
       });
 
 
