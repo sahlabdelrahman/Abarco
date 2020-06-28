@@ -236,6 +236,7 @@ header nav .collapse .language_button {
   padding: 15px;
   background-color: #FFF;
   border-radius: 5px;
+  overflow: hidden;
 }
 .licenses_companies_area .tab_content .brand img {
   max-width: 270px;
@@ -1592,7 +1593,7 @@ header nav .collapse .language_button {
   right: 85px;
   bottom: 50px;
   padding: 8px 16px;
-  background-color: #2D3766;
+  background-color: #ee8936;
   color: #FFF;
   box-shadow: 0px 0px 3px #CCCCCC29;
   border: 1px solid #1DBCDD;
