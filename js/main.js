@@ -3,11 +3,7 @@ $(document).ready(function () {
     // Loading screen
     $(window).on('load', function () {
         "use strict";
-        $(".loading-overlay .sk-chase").fadeOut(1000, function () {
-            $(this).parent().fadeOut(1000, function () {
-                $(this).remove();
-            });
-        });
+        $(".background").fadeOut(1000);
     });
 
 
