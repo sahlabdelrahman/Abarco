@@ -4,8 +4,8 @@ $(document).ready(function () {
     $(window).on('load', function () {
         "use strict";
         $(".background").fadeOut(1000);
+        $(".share").fadeIn(1000);
     });
-
 
 
     // Start popup main video
